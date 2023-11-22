@@ -2,17 +2,24 @@ package main;
 
 import checker.Checker;
 import checker.CheckerConstants;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import fileio.input.LibraryInput;
+import commands.Command;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Iterator;
 import java.util.Objects;
+
+import static java.lang.System.out;
 
 /**
  * The entry point to this homework. It runs the checker that tests your implentation.
@@ -73,10 +80,34 @@ public final class Main {
 
         ArrayNode outputs = objectMapper.createArrayNode();
 
+        ArrayNode searchCommands = objectMapper.readValue(new File(CheckerConstants.TESTS_PATH + "test01_searchBar_songs_podcasts.json/"), ArrayNode.class);
+
+        Command previousCommand = new Command(library);
+
+//        System.out.println(searchCommands.toPrettyString());
+
+        for (JsonNode searchCommand : searchCommands) {
+            ObjectNode currentNode = (ObjectNode) searchCommand;
+
+            Command currentCommand = objectMapper.treeToValue(currentNode, Command.class);
+
+            currentCommand.setLibrary(library);
+            currentCommand.setResults(previousCommand.getResults());
+            JsonNode output = currentCommand.execute();
+
+            outputs.add(output);
+
+            previousCommand = new Command(currentCommand);
+
+
+//            System.out.println(previousCommand.getMessage());
+        }
+
+
 
         // TODO add your implementation
-        // git test!
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
+//        objectWriter.writeValue(out, outputs);
         objectWriter.writeValue(new File(filePathOutput), outputs);
     }
 }

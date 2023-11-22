@@ -1,0 +1,105 @@
+[ {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 10,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 4 results",
+  "results" : [ "Stairway to Heaven", "Start Me Up", "Empire State of Mind", "Stargazing" ]
+}, {
+  "command" : "select",
+  "username" : "alice22",
+  "timestamp" : 15,
+  "type" : null,
+  "itemNumber" : 1,
+  "message" : "Successfully selected Start Me Up",
+  "results" : [ "Stairway to Heaven", "Start Me Up", "Empire State of Mind", "Stargazing" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 20,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 3 results",
+  "results" : [ "Shape of You", "Happier", "Castle on the Hill" ]
+}, {
+  "command" : "select",
+  "username" : "alice22",
+  "timestamp" : 25,
+  "type" : null,
+  "itemNumber" : 4,
+  "message" : "The selected ID is too high.",
+  "results" : [ "Shape of You", "Happier", "Castle on the Hill" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 30,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 5 results",
+  "results" : [ "Money Trees", "Big Pimpin'", "I Don't Want to Miss a Thing", "Sicko Mode", "Happier" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 40,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 2 results",
+  "results" : [ "Begin Again", "Butterfly Effect" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 50,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 5 results",
+  "results" : [ "Shape of You", "Don't", "Maps", "The Man", "Freedom" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 60,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 5 results",
+  "results" : [ "Shape of You", "Don't", "Money Trees", "Whatever You Need", "Maps" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 70,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 5 results",
+  "results" : [ "Don't", "Stairway to Heaven", "Money Trees", "Under Pressure", "Dream On" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 80,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 5 results",
+  "results" : [ "Money Trees", "DNA.", "Kings Dead", "Legendary", "Swimming Pools (Drank)" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 90,
+  "type" : "song",
+  "itemNumber" : 0,
+  "message" : "Search returned 5 results",
+  "results" : [ "Stairway to Heaven", "Under Pressure", "Dream On", "The Unforgiven", "Start Me Up" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 100,
+  "type" : "podcast",
+  "itemNumber" : 0,
+  "message" : "Search returned 2 results",
+  "results" : [ "The Unforgiven", "The Man" ]
+}, {
+  "command" : "search",
+  "username" : "alice22",
+  "timestamp" : 110,
+  "type" : "podcast",
+  "itemNumber" : 0,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+} ]
